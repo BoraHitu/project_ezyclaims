@@ -1,38 +1,58 @@
-import "./App.css";
+import { Link } from "react-router-dom";
 import Logo from "/logo.png";
+import "./App.css";
+
 function Nav() {
   return (
-    <>
-      <nav>
-        <ul className="list-none">
-          <a>
-            <img href="" src={Logo}></img>
-          </a>
-          <a className="t1" href="">
-            <span>
-              <span class="str1">EZYCLAIM</span>
-            </span>
-            <span>Seamless & Trusted</span>
-            <span class="span1">Claim Support</span>
-          </a>
-          <a href="" className="text">
+    <nav className="nav-container">
+      <ul className="nav-list">
+        <li className="logo-item">
+          <Link to="/">
+            <img
+              src="/logo.png"
+              alt="logo"
+              className="h-12 w-auto object-contain"
+            />
+          </Link>
+        </li>
+
+        <li className="brand-text">
+          <Link to="/" className="t1">
+            <div className="brand-lines">
+              <span className="str1">EZYCLAIM</span>
+              <span>Seamless & Trusted</span>
+              <span className="span1">Claim Support</span>
+            </div>
+          </Link>
+        </li>
+
+        <li>
+          <Link to="/" className="text">
             Home
-          </a>
-          <a href="" className="text">
+          </Link>
+        </li>
+        <li>
+          <Link to="/login" className="text">
             Login
-          </a>
-          <a href="" className="text">
+          </Link>
+        </li>
+        <li>
+          <Link to="/services" className="text">
             Services
-          </a>
-          <a href="" className="text">
+          </Link>
+        </li>
+        <li>
+          <Link to="/about" className="text">
             About
-          </a>
-          <a href="" className="text">
+          </Link>
+        </li>
+        <li>
+          <Link to="/contact" className="text">
             Contact
-          </a>
-        </ul>
-      </nav>
-    </>
+          </Link>
+        </li>
+      </ul>
+    </nav>
   );
 }
 
